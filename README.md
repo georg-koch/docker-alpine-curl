@@ -1,7 +1,7 @@
 ![Docker Stars](https://img.shields.io/docker/stars/codizz/curl.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/codizz/curl.svg)
 [![Image Size](https://img.shields.io/imagelayers/image-size/codizz/curl/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
-[![Image Layers](https://img.shields.io/imagelayers/layers/codizz/codizz/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
+[![Image Layers](https://img.shields.io/imagelayers/layers/codizz/curl/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
 
 ### docker-alpine-curl
 
