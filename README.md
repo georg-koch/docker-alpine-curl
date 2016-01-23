@@ -1,13 +1,13 @@
-### docker-alpine-curl
-
 ![Docker Stars](https://img.shields.io/docker/stars/codizz/curl.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/codizz/curl.svg)
 [![Image Size](https://img.shields.io/imagelayers/image-size/codizz/curl/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
 [![Image Layers](https://img.shields.io/imagelayers/layers/codizz/codizz/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
 
+### docker-alpine-curl
+
 This project is a Docker image project for `curl`. The Docker image is based on [docker-alpine](https://github.com/gliderlabs/docker-alpine) v3.3 with installed `curl`.
 
-#### Usage
+### Usage
 
 First start of this image and check functionality.
 
