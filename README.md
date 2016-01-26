@@ -1,7 +1,12 @@
+![Circle CI](https://img.shields.io/circleci/project/codizz/docker-alpine-curl.svg)
 ![Docker Stars](https://img.shields.io/docker/stars/codizz/curl.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/codizz/curl.svg)
 [![Image Size](https://img.shields.io/imagelayers/image-size/codizz/curl/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
 [![Image Layers](https://img.shields.io/imagelayers/layers/codizz/curl/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
+
+### Supported tags
+
+* [`latest`](https://github.com/codizz/docker-alpine-curl/tree/master)([latest/Dockerfile](https://github.com/codizz/docker-alpine-curl/tree/master/Dockerfile))
 
 ### docker-alpine-curl
 
