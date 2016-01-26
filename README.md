@@ -8,7 +8,7 @@
 
 * [`latest`](https://github.com/codizz/docker-alpine-curl/tree/master)([latest/Dockerfile](https://github.com/codizz/docker-alpine-curl/tree/master/Dockerfile))
 
-### docker-alpine-curl
+### Project
 
 This project is a Docker image project for `curl`. The Docker image is based on [docker-alpine](https://github.com/gliderlabs/docker-alpine) v3.3 with installed `curl`.
 
