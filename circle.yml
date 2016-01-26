@@ -12,7 +12,7 @@ dependencies:
 
 test:
   override:
-    - docker run -d -p 9200:9200 codizz/curl
+    - docker run -d codizz/curl
 
 deployment:
   hub: 
