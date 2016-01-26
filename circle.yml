@@ -7,10 +7,8 @@ dependencies:
     - "~/docker"
   override:
     - docker info
-    - docker version
-    - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
     - docker build -t codizz/curl .
-    - mkdir -p ~/docker; docker save codizz/curl > ~/docker/image.tar
+    - docker save codizz/curl > $CIRCLE_ARTIFACTS/docker-alpine-curl.tar
 
 test:
   override:
