@@ -8,16 +8,20 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
+
       - run:
           name: Duild docker image
           command: |
             docker build -t codizz/curl .
-      - run:
-          name: Save docker image
-          command: |
-            mkdir -p /caches
-            docker save codizz/curl > /caches/docker-alpine-curl.tar
+
       - run:
           name: Run test
           command: |
             docker run -d codizz/curl
+
+      - run:
+          name: Push docker image
+          command: |
+            docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+            docker push codizz/curl
+            
