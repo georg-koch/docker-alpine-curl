@@ -1,4 +1,4 @@
-![Circle CI](https://img.shields.io/circleci/project/codizz/docker-alpine-curl.svg)
+[![CircleCI](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/master.svg?style=svg)](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/master)
 ![Docker Stars](https://img.shields.io/docker/stars/codizz/curl.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/codizz/curl.svg)
 [![Image Size](https://img.shields.io/imagelayers/image-size/codizz/curl/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
