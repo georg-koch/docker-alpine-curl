@@ -12,15 +12,12 @@ jobs:
       - run:
           name: Duild docker image
           command: |
-            docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
-                         --build-arg BRANCH=`cat $CIRCLE_BRANCH` \
-                         --tag codizz/curl \
-                         .
+            docker build --tag codizz/curl .
 
       - run:
           name: Run test
           command: |
-            docker run -d codizz/curl
+            docker run codizz/curl
 
       - run:
           name: Push docker image
