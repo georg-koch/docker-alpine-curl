@@ -1,3 +1,4 @@
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://doge.mit-license.org)
 [![CircleCI](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/master.svg?style=svg)](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/master)
 ![Docker Stars](https://img.shields.io/docker/stars/codizz/curl.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/codizz/curl.svg)
@@ -44,6 +45,3 @@ Getting `cUrl` help:
 
     $ docker run codizz/curl --help
 
-### License
-
-MIT
