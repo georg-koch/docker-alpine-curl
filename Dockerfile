@@ -7,7 +7,7 @@ LABEL name="Docker apline - curl" \
       scm-url="https://github.com/georg-koch/docker-alpine-curl/" \
       vendor="Georg Koch"
       
-RUN apk add --no-cache --grade curl && \
+RUN apk add --no-cache --upgrade curl && \
     rm -rf /var/cache/apk/*
 
 ENTRYPOINT ["curl"]
