@@ -1,9 +1,9 @@
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://doge.mit-license.org)
 [![CircleCI](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/master.svg?style=svg)](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/master)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://doge.mit-license.org)
 ![Docker Stars](https://img.shields.io/docker/stars/codizz/curl.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/codizz/curl.svg)
-[![Image Size](https://img.shields.io/imagelayers/image-size/codizz/curl/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
-[![Image Layers](https://img.shields.io/imagelayers/layers/codizz/curl/latest.svg)](https://imagelayers.io/?images=codizz/curl:latest)
+![Docker Image Layers](https://images.microbadger.com/badges/image/codizz/curl.svg)
+![Docker Image Version](https://images.microbadger.com/badges/version/codizz/curl.svg)
 
 ### Supported tags
 
