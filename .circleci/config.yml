@@ -19,9 +19,9 @@ jobs:
       - run:
           name: Deploy docker image
           command: |
-            docker tag codizz/curl:latest codizz/curl:3.3
+            docker tag codizz/curl:latest codizz/curl:1.0
             docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
-            docker push codizz/curl:3.3
+            docker push codizz/curl:1.0
            
 workflows:
   version: 2
@@ -33,5 +33,5 @@ workflows:
             branches:
               only: master
             tags:
-              only: /^v.*/
+              only: /.*/
           
