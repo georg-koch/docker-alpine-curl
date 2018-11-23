@@ -17,7 +17,7 @@ jobs:
           command: |
             docker run codizz/curl
 
- deploy:
+  deploy:
    steps:
       - run:
           command: |
