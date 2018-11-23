@@ -9,12 +9,15 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: Build docker image
           command: |
             docker build --tag codizz/curl .
       - run:
+          name: Test docker image
           command: |
             docker run codizz/curl
       - run:
+          name: Deploy docker image
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push codizz/curl
@@ -24,4 +27,11 @@ workflows:
   build-test-and-deploy:
     jobs:
       - build
-     
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+           
