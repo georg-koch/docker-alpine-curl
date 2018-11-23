@@ -8,20 +8,31 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-
       - run:
-          name: Duild docker image
           command: |
             docker build --tag codizz/curl .
-
+  test:
+    steps:  
       - run:
-          name: Run test
           command: |
             docker run codizz/curl
 
+ deploy:
+   steps:
       - run:
-          name: Push docker image
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push codizz/curl
+           
+workflows:
+  version: 2
+  build-test-and-deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - test
             
