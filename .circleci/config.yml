@@ -14,7 +14,8 @@ jobs:
   test:
     docker:
       - image: docker:17.05.0-ce-git
-    steps:  
+    steps:
+      - setup_remote_docker
       - run:
           command: |
             docker run codizz/curl
@@ -23,6 +24,7 @@ jobs:
     docker:
       - image: docker:17.05.0-ce-git
     steps:
+      - setup_remote_docker
       - run:
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
