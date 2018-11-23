@@ -28,4 +28,9 @@ workflows:
     jobs:
       - build:
           context: Docker
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /.*/
           
