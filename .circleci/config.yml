@@ -33,5 +33,6 @@ workflows:
             branches:
               only: 
                 - master
-                - /release/.*
-          
+                - /release.*/
+            tags:
+              only: /.*/
