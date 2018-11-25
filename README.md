@@ -22,9 +22,10 @@ $ docker run codizz/curl
 ```
 Output is like:
 ```
-curl 7.42.1 (x86_64-alpine-linux-musl) libcurl/7.42.1 OpenSSL/1.0.2e zlib/1.2.8 libssh2/1.5.0
+curl 7.61.1 (x86_64-alpine-linux-musl) libcurl/7.61.1 LibreSSL/2.0.0 zlib/1.2.11 libssh2/1.8.0 nghttp2/1.32.0
+Release-Date: 2018-09-05
 Protocols: dict file ftp ftps gopher http https imap imaps pop3 pop3s rtsp scp sftp smb smbs smtp smtps telnet tftp
-Features: IPv6 Largefile NTLM NTLM_WB SSL libz TLS-SRP UnixSockets
+Features: AsynchDNS IPv6 Largefile NTLM NTLM_WB SSL libz HTTP2 UnixSockets HTTPS-proxy
 ```
 
 Usage of `cUrl`:
