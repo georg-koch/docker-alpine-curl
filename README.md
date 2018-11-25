@@ -17,7 +17,7 @@ It is a Docker image with `cUrl` installed. The Docker image is based on [docker
 
 ### Usage
 
-First start of the image to check functionality.
+Check installed `cUrl` version:
 ```
 $ docker run codizz/curl
 ```
@@ -27,6 +27,15 @@ curl 7.61.1 (x86_64-alpine-linux-musl) libcurl/7.61.1 LibreSSL/2.0.0 zlib/1.2.11
 Release-Date: 2018-09-05
 Protocols: dict file ftp ftps gopher http https imap imaps pop3 pop3s rtsp scp sftp smb smbs smtp smtps telnet tftp
 Features: AsynchDNS IPv6 Largefile NTLM NTLM_WB SSL libz HTTP2 UnixSockets HTTPS-proxy
+```
+
+Check installed `alpine` version:
+```
+docker run --entrypoint cat codizz/curl /etc/alpine-release
+```
+Output like:
+```
+3.8.1
 ```
 
 Usage of `cUrl`:
@@ -44,7 +53,7 @@ Output is like:
 </html>
 ```
 
-To entree the container:
+To go into the container:
 ```
 $ docker run -it --entrypoint sh codizz/curl
 ```
