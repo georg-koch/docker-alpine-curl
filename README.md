@@ -1,14 +1,15 @@
-[![CircleCI](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/master.svg?style=svg)](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/master)
+[![CircleCI](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/release%2F2.0.svg?style=svg)](https://circleci.com/gh/georg-koch/docker-alpine-curl/tree/release%2F2.0)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://doge.mit-license.org)
 ![Docker Stars](https://img.shields.io/docker/stars/codizz/curl.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/codizz/curl.svg)
-[![Docker Image Layers](https://images.microbadger.com/badges/image/codizz/curl.svg)](https://microbadger.com/images/codizz/curl "Get your own image badge on microbadger.com")
-[![Docker Image Version](https://images.microbadger.com/badges/version/codizz/curl.svg)](https://microbadger.com/images/codizz/curl "Get your own version badge on microbadger.com")
+[![Docker Image Layers](https://images.microbadger.com/badges/image/codizz/curl:2.0.svg)](https://microbadger.com/images/codizz/curl:2.0 "Get your own image badge on microbadger.com")
+[![Docker Image Version](https://images.microbadger.com/badges/version/codizz/curl:2.0.svg)](https://microbadger.com/images/codizz/curl:2.0 "Get your own version badge on microbadger.com")
 
 ### Supported tags
 
 * [`latest`](https://github.com/georg-koch/docker-alpine-curl/tree/master)([latest/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/master/Dockerfile))
 * [`1.0`](https://github.com/georg-koch/docker-alpine-curl/tree/1.0)([1.0/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/1.0/Dockerfile))
+* [`2.0`](https://github.com/georg-koch/docker-alpine-curl/tree/2.0)([2.0/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/2.0/Dockerfile))
 
 ### Project
 
@@ -35,7 +36,7 @@ $ docker run -t codizz/curl http://example.com/
 Output is like: 
 ```
 <!doctype html>
-<html>
+<html>x
 <head>
     <title>Example Domain</title>
     ...
