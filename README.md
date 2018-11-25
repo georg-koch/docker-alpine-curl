@@ -9,6 +9,7 @@
 
 * [`latest`](https://github.com/georg-koch/docker-alpine-curl/tree/master)([latest/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/master/Dockerfile))
 * [`1.0`](https://github.com/georg-koch/docker-alpine-curl/tree/1.0)([1.0/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/1.0/Dockerfile))
+* [`2.0`](https://github.com/georg-koch/docker-alpine-curl/tree/2.0)([2.0/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/2.0/Dockerfile))
 
 ### Project
 
