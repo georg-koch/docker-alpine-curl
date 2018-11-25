@@ -12,7 +12,7 @@
 
 ### Project
 
-It is a Docker image with `cUrl` installed. The Docker image is based on [docker-alpine](https://github.com/gliderlabs/docker-alpine) v3.3.
+It is a Docker image with `cUrl` installed. The Docker image is based on [docker-alpine](https://github.com/gliderlabs/docker-alpine) v3.8.
 
 ### Usage
 

@@ -30,7 +30,7 @@ workflows:
           context: Docker
           filters:
             branches:
-              only: master
-            tags:
-              only: /.*/
+              only: 
+                - master
+                - release/.*
           
