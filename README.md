@@ -14,7 +14,7 @@
 
 ### Project
 
-It is a Docker image with `cUrl` installed. The Docker image is based on [docker-alpine](https://github.com/gliderlabs/docker-alpine) v3.8.
+It is a Docker image with `cUrl` installed. The Docker image is based on [docker-alpine](https://github.com/gliderlabs/docker-alpine) v3.8.2.
 
 ### Usage
 
@@ -36,7 +36,7 @@ docker run --entrypoint cat codizz/curl /etc/alpine-release
 ```
 Output like:
 ```
-3.8.1
+3.8.2
 ```
 
 Usage of `cUrl`:
