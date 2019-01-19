@@ -18,7 +18,7 @@ It is a Docker image with `cUrl` installed. The Docker image is based on [docker
 
 ### Usage
 
-First start of the image to check functionality.
+At first start the image to check functionality.
 ```
 $ docker run codizz/curl
 ```
