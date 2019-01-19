@@ -10,6 +10,7 @@
 * [`latest`](https://github.com/georg-koch/docker-alpine-curl/tree/master)([latest/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/master/Dockerfile))
 * [`1.0`](https://github.com/georg-koch/docker-alpine-curl/tree/1.0)([1.0/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/1.0/Dockerfile))
 * [`2.0`](https://github.com/georg-koch/docker-alpine-curl/tree/2.0)([2.0/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/2.0/Dockerfile))
+* [`2.1`](https://github.com/georg-koch/docker-alpine-curl/tree/2.1)([2.1/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/2.1/Dockerfile))
 
 ### Project
 
@@ -17,7 +18,7 @@ It is a Docker image with `cUrl` installed. The Docker image is based on [docker
 
 ### Usage
 
-Check installed `cUrl` version:
+At first start the image to check functionality.
 ```
 $ docker run codizz/curl
 ```
@@ -53,7 +54,7 @@ Output is like:
 </html>
 ```
 
-To go into the container:
+To entree the container:
 ```
 $ docker run -it --entrypoint sh codizz/curl
 ```

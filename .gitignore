@@ -1,3 +1,5 @@
 /.project
 /.settings/
 /.README.md.html
+.gitignore
+.idea/
