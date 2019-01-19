@@ -34,3 +34,5 @@ workflows:
               only: 
                 - master
                 - release/.*
+            tags:
+              only: /.*/
