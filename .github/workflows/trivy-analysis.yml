@@ -1,4 +1,4 @@
-name: build
+name: Trivy Scanner
 on:
   push:
     branches: [ master ]
@@ -23,7 +23,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'docker pull codizz/curl:latest'
+          image-ref: 'codizz/curl:latest'
           format: 'template'
           template: '@/contrib/sarif.tpl'
           output: 'trivy-results.sarif'
