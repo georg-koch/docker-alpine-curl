@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.12.1
 
 LABEL maintainer="Georg Koch <dev@bytemania.eu>" \
     name="Docker apline - curl" \
