@@ -4,6 +4,7 @@
 [![Docker Image Layers](https://images.microbadger.com/badges/image/codizz/curl.svg)](https://microbadger.com/images/codizz/curl "Get your own image badge on microbadger.com")
 [![Docker Image Version](https://images.microbadger.com/badges/version/codizz/curl.svg)](https://microbadger.com/images/codizz/curl "Get your own version badge on microbadger.com")
 ![Docker Image CI](https://github.com/georg-koch/docker-alpine-curl/workflows/Docker%20Image%20CI/badge.svg)
+![Anchore Container Scan](https://github.com/georg-koch/docker-alpine-curl/workflows/Anchore%20Container%20Scan/badge.svg)
 
 ### Supported tags
 
