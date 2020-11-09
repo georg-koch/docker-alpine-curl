@@ -14,11 +14,18 @@ jobs:
       uses: actions/checkout@v2
     - name: Pull the Docker image
       run: docker pull codizz/curl:latest
-    - name: Run the Anchore scan action itself with GitHub Advanced Security code scanning integration enabled
-      uses: anchore/scan-action@main
+    - name: Scan image
+      uses: anchore/scan-action@v2
+      id: scan
       with:
         image: "codizz/curl:latest"
         acs-report-enable: true
+        fail-build: true
+    - name: Upload Anchore Scan report
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: ${{ steps.scan.outputs.sarif }}
+
 #    - name: Upload Anchore Scan Report
 #      uses: github/codeql-action/upload-sarif@v1
 #      with:
