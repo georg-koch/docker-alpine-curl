@@ -1,69 +1,67 @@
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://doge.mit-license.org)
+# 🐳 Alpine cURL Docker Image
+
+Lightweight Docker image based on **Alpine Linux**, preinstalled with `curl`.  
+Ideal for testing, debugging, CI pipelines & quick HTTP checks.
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Docker Stars](https://img.shields.io/docker/stars/codizz/curl.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/codizz/curl.svg)
-[![Docker Image Layers](https://images.microbadger.com/badges/image/codizz/curl.svg)](https://microbadger.com/images/codizz/curl "Get your own image badge on microbadger.com")
-[![Docker Image Version](https://images.microbadger.com/badges/version/codizz/curl.svg)](https://microbadger.com/images/codizz/curl "Get your own version badge on microbadger.com")
 ![Docker Image CI](https://github.com/georg-koch/docker-alpine-curl/workflows/Docker%20Image%20CI/badge.svg)
 ![Anchore Container Scan](https://github.com/georg-koch/docker-alpine-curl/workflows/Anchore%20Container%20Scan/badge.svg)
 
-### Supported tags
+---
 
-* [`latest`](https://github.com/georg-koch/docker-alpine-curl/tree/master)([latest/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/master/Dockerfile))
-* [`1.0`](https://github.com/georg-koch/docker-alpine-curl/tree/1.0)([1.0/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/1.0/Dockerfile))
-* [`2.0`](https://github.com/georg-koch/docker-alpine-curl/tree/2.0)([2.0/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/2.0/Dockerfile))
-* [`2.1`](https://github.com/georg-koch/docker-alpine-curl/tree/2.1)([2.1/Dockerfile](https://github.com/georg-koch/docker-alpine-curl/tree/2.1/Dockerfile))
+## 🚀 Quickstart
 
-### Project
+Run and check `curl` version:
 
-It is a Docker image with `cUrl` installed. The Docker image is based on [docker-alpine](https://github.com/gliderlabs/docker-alpine) v3.8.2.
-
-### Usage
-
-At first start the image to check functionality.
-```
-$ docker run codizz/curl
-```
-Output is like:
-```
-curl 7.61.1 (x86_64-alpine-linux-musl) libcurl/7.61.1 LibreSSL/2.0.0 zlib/1.2.11 libssh2/1.8.0 nghttp2/1.32.0
-Release-Date: 2018-09-05
-Protocols: dict file ftp ftps gopher http https imap imaps pop3 pop3s rtsp scp sftp smb smbs smtp smtps telnet tftp
-Features: AsynchDNS IPv6 Largefile NTLM NTLM_WB SSL libz HTTP2 UnixSockets HTTPS-proxy
+```sh
+docker run codizz/curl
 ```
 
-Check installed `alpine` version:
+Make a request:
+
+```sh
+docker run codizz/curl https://example.com
 ```
+
+Get `curl` help:
+
+```sh
+docker run codizz/curl --help
+```
+
+Enter the container:
+
+```sh
+docker run -it --entrypoint sh codizz/curl
+```
+
+Check Alpine version:
+
+```sh
 docker run --entrypoint cat codizz/curl /etc/alpine-release
 ```
-Output like:
-```
-3.8.2
+
+## 📦 Install via Docker or GHCR
+
+Pull from Docker Hub:
+
+```sh
+docker pull codizz/curl
 ```
 
-Usage of `cUrl`:
-```
-$ docker run -t codizz/curl http://example.com/
-```
-Output is like: 
-```
-<!doctype html>
-<html>
-<head>
-    <title>Example Domain</title>
-    ...
-</body>
-</html>
-```
+## 🔥 Example use cases
 
-To entree the container:
-```
-$ docker run -it --entrypoint sh codizz/curl
-```
+| Use Case                          | Command                                                       |   |         |
+| --------------------------------- | ------------------------------------------------------------- | - | ------- |
+| Test API endpoint                 | `docker run codizz/curl https://example.com`                  |   |         |
+| Download file                     | `docker run -v $PWD:/out codizz/curl -o /out/file.zip URL`    |   |         |
+| HTTP debugging                    | `docker run codizz/curl -v URL`                               |   |         |
+| As healthcheck tool in Kubernetes | `curl --fail [https://service/health](https://service/health) |   | exit 1` |
 
-Getting `cUrl` help:
-```
-$ docker run codizz/curl --help
-```
+## 🤘 Have fun & contribute
 
-### Have fun!
+Issues and PRs welcome!
 
+GitHub: https://github.com/georg-koch/docker-alpine-curl
