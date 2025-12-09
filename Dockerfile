@@ -1,11 +1,11 @@
-FROM alpine:3
+FROM alpine:3.23
 
 LABEL maintainer="Georg Koch <dev@bytemania.eu>" \
-    name="Docker apline - curl" \
-    description="A docker image built on alpine base with curl installed."
+      org.opencontainers.image.title="alpine-curl" \
+      org.opencontainers.image.description="Lightweight Alpine image with curl installed" \
+      org.opencontainers.image.authors="Georg Koch"
 
-RUN apk add --no-cache --upgrade curl && \
-    rm -rf /var/cache/apk/*
+RUN apk add --no-cache curl
 
 ENTRYPOINT ["curl"]
 CMD ["--version"]
