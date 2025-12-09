@@ -3,6 +3,10 @@ name: ci
 on:
   push:
 
+
+env:
+  IMAGE_NAME: codizz/curl
+  
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -10,11 +14,21 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE_NAME }}
+        env:
+          DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
+          
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
           push: false
-          tags: codizz/curl:latest
+          sbom: true
+          tags: ${{ steps.meta.outputs.tags }}
+          annotations: ${{ steps.meta.outputs.annotations }}
