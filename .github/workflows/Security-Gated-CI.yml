@@ -45,33 +45,33 @@ jobs:
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
-      - name: Build Container Image (no push yet)
+      - name: Build Container Image (local only)
         uses: docker/build-push-action@v6
         with:
           push: false           # do NOT push before scan
           tags: ${{ steps.meta.outputs.tags }}
-          annotations: ${{ steps.meta.outputs.annotations }}
           sbom: true
 
+      # Scan image BEFORE pushing
       - name: Run Anchore Security Scan
         id: scan
         uses: anchore/scan-action@v3
         with:
           image: ${{ env.IMAGE_NAME }}:latest
           fail-build: true      # stops job if vulnerabilities found
-          acs-report-enable: true
+          output-format: sarif
 
+      # Upload vulnerability report to GitHub Security Dashboard
       - name: Upload SARIF to GitHub Security Dashboard
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.scan.outputs.sarif }}
 
-      # only executes if scan succeeded
+      # Push only if scan succeeded
       - name: Push image (only if no vulnerabilities)
         if: success()           # = passed scan
         uses: docker/build-push-action@v6
         with:
           push: true            # now push is allowed
           tags: ${{ steps.meta.outputs.tags }}
-          annotations: ${{ steps.meta.outputs.annotations }}
           sbom: true
