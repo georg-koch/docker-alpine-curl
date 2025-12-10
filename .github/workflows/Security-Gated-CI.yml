@@ -37,11 +37,9 @@ jobs:
             ${{ env.IMAGE_NAME }}
           tags: |
             type=schedule
-            type=ref,event=branch
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
-            type=sha
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
@@ -63,7 +61,7 @@ jobs:
 
       # Upload vulnerability report to GitHub Security Dashboard
       - name: Upload SARIF to GitHub Security Dashboard
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: ${{ steps.scan.outputs.sarif }}
 
