@@ -6,8 +6,7 @@ Ideal for testing, debugging, CI pipelines & quick HTTP checks.
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Docker Stars](https://img.shields.io/docker/stars/codizz/curl.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/codizz/curl.svg)
-![Docker Image CI](https://github.com/georg-koch/docker-alpine-curl/workflows/Docker%20Image%20CI/badge.svg)
-![Anchore Container Scan](https://github.com/georg-koch/docker-alpine-curl/workflows/Anchore%20Container%20Scan/badge.svg)
+[![CI Build, Scan & Push](https://github.com/georg-koch/docker-alpine-curl/actions/workflows/Security-Gated-CI.yml/badge.svg)](https://github.com/georg-koch/docker-alpine-curl/actions/workflows/Security-Gated-CI.yml)
 
 ---
 
