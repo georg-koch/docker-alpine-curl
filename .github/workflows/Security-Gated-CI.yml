@@ -36,6 +36,7 @@ jobs:
           images: |
             ${{ env.IMAGE_NAME }}
           tags: |
+            type=raw,value=latest,enable=true
             type=schedule
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
@@ -47,8 +48,9 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: false           # do NOT push before scan
-          tags: ${{ steps.meta.outputs.tags }}
           sbom: true
+          tags: ${{ steps.meta.outputs.tags }}
+          annotations: ${{ steps.meta.outputs.annotations }}
 
       # Scan image BEFORE pushing
       - name: Run Anchore Security Scan
@@ -71,5 +73,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true            # now push is allowed
-          tags: ${{ steps.meta.outputs.tags }}
           sbom: true
+          tags: ${{ steps.meta.outputs.tags }}
+          annotations: ${{ steps.meta.outputs.annotations }}
